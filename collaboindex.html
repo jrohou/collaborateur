@@ -16,9 +16,13 @@
     <br>
     <h1> Mon Collaborateur </h1>
     <br>
-    <button type="button" class="btn btn-primary btn-lg active" data-toggle="modal" data-target="#ajoutwindow">Ajouter un nouveau Collaborateur</button>
+    <h3>Collaborate different</h3>
+    <br>
+    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#ajoutwindow">Ajouter un nouveau Collaborateur</button>
     <br>
     <div class="container">
+
+
       <div class="modal fade" id="ajoutwindow" tabindex="-1" role="dialog" aria-labelledby="ajoutwindow" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
@@ -77,12 +81,13 @@
                   <button type="button" class="btn btn-secondary" data-dimiss="modal">Abandonner</button>
                 <button class="btn btn-primary" type="submit">Ajouter mon nouveau Collaborateur</button>
               </form>
-
-
             </div>
         </div>
-      </div>
     </div>
+    </div>
+  </div>
+
+
     <div class="container">
       <div class="col-md-6 mb-3">
         <table class="table table-bordered">
@@ -90,24 +95,91 @@
             <th scope="col">#</th>
             <th scope="col">Nom</th>
             <th scope="col">Prénom</th>
-            <th scope="col">Date de naissance</th>
-            <th scope="col">Adresse</th>
-            <th scope="col">Code Postal</th>
-            <th scope="col">Ville</th>
+            <th scope="col">Afficher</th>
+            <th scope="col">Modifier</th>
           </thead>
           <tbody>
               <th scope="row">1</th>
               <td>Test</td>
               <td>Test</td>
-              <td>Test</td>
-              <td>Test</td>
-              <td>Test</td>
-              <td>Test</td>
+              <td>
+                <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#ajoutwindow">Afficher</button>
+              </td>
+              <td>
+                <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#editwindow">Modifier</button>
+              </td>
             </tr>
           </tbody>
         </table>
       </div>
     </div>
+
+
+    <div class="container">
+
+
+      <div class="modal fade" id="editwindow" tabindex="-1" role="dialog" aria-labelledby="editwindow" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="ajoutwindow">Modifier un Collaborateur</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              </button>
+            </div>
+            <div class="modal-body">
+
+
+              <form>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <input type="text" class="form-control is-valid" id="validationServer01" placeholder="Prénom" required>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="validationServer02">Nom</label>
+                    <input type="text" class="form-control is-valid" id="validationServer02" placeholder="Nom" required>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="validationServer03">Date de naissance</label>
+                    <input type="text" class="form-control is-invalid" id="validationServer03" placeholder="Date de naissance" required>
+                    <div class="invalid-feedback">
+                      Veuillez saisir une date de naissance valide.
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="validationServer04">Adresse</label>
+                    <input type="text" class="form-control is-invalid" id="validationServer04" placeholder="Adresse" required>
+                    <div class="invalid-feedback">
+                      Veuillez saisir une adresse valide.
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-3">
+                    <label for="validationServer05">Code Postal</label>
+                    <input type="text" class="form-control is-invalid" id="validationServer05" placeholder="Code Postal" required>
+                    <div class="invalid-feedback">
+                      Veuillez saisir un code postal valide.
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-3">
+                    <label for="validationServer06">Ville</label>
+                    <input type="text" class="form-control is-invalid" id="validationServer06" placeholder="Ville" required>
+                    <div class="invalid-feedback">
+                      Veuillez saisir une ville valide.
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dimiss="modal">Abandonner</button>
+                <button class="btn btn-primary" type="submit">Modifier le Collaborateur</button>
+              </form>
+            </div>
+        </div>
+    </div>
+    </div>
+  </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
