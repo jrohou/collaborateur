@@ -9,9 +9,19 @@ $(document).ready(function(){
       window.location.href="collaboindex.html";
     }
     else {
+
+      $('#badlogin').show();
       window.location.href="index.html";
     }
 
+
+  })
+
+  $('#btnInscription').click(function(e){
+
+    e.preventDefault();
+    $('#inscrit').show();
+    window.location.href="index.html";
 
   })
 

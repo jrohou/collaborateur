@@ -18,6 +18,11 @@
   <body>
     <br>
     <h1> Mon Collaborateur </h1>
+  <!--  <div class="alert alert-success" id="inscrit" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      Votre inscription a bien été prise en compte.
+    </div>
+  -->
     <br>
     <em><h5>Collaborate different</h5></em>
     <br>
@@ -54,7 +59,10 @@
               </button>
             </div>
             <div class="modal-body">
-
+              <!--<div class="alert alert-danger" id="badlogin" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                Une erreur est survenue.
+              </div>-->
 
               <form>
                   <div class="form-group">
@@ -100,17 +108,17 @@
                 <form>
                   <div class="form-check form-check-inline">
                     <label class="form-check-label">
-                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="mlle" value="Mlle">Mlle
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="mlle" value="Mlle"required>Mlle
                     </label>
                   </div>
                   <div class="form-check form-check-inline">
                     <label class="form-check-label">
-                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="mme" value="Mme">Mme
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="mme" value="Mme"required>Mme
                     </label>
                   </div>
                   <div class="form-check form-check-inline">
                     <label class="form-check-label">
-                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="m" value="M">M
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="m" value="M"required>M
                     </label>
                   </div>
                   <div class="form-group">
@@ -135,7 +143,7 @@
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="close btn btn-secondary" data-dismiss="modal" aria-label="Close">Fermer</button>
-                    <button class="btn btn-primary" type="submit">S'inscrire</button>
+                    <button class="btn btn-primary" type="submit" id="btnInscription">S'inscrire</button>
                   </form>
                 </div>
 

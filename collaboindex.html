@@ -40,15 +40,20 @@
 
               <form>
                 <div class="row">
-                  <div class="col-md-6 mb-3">
+                  <div class="col-md-12 mb-6">
                     <label for="validationServer01">Prénom</label>
                     <input type="text" class="form-control is-valid" id="validationServer01" placeholder="Prénom" required>
                   </div>
-                  <div class="col-md-6 mb-3">
+                  <div class="col-md-12 mb-6">
                     <label for="validationServer02">Nom</label>
                     <input type="text" class="form-control is-valid" id="validationServer02" placeholder="Nom" required>
                   </div>
+                  <div class="col-md-12 mb-6">
+                    <label for="validationServer09">Photo</label>
+                    <input type="file" class="form-control-file" id="validationServer09" accept="image/*" required>
+                  </div>
                 </div>
+                <br>
                 <div class="row">
                   <div class="col-md-6 mb-3">
                     <label for="validationServer03">Date de naissance</label>
@@ -57,7 +62,7 @@
                       Veuillez saisir une date de naissance valide.
                     </div>
                   </div>
-                  <div class="col-md-6 mb-3">
+                  <div class="col-md-12 mb-6">
                     <label for="validationServer04">Adresse</label>
                     <input type="text" class="form-control is-invalid" id="validationServer04" placeholder="Adresse" required>
                     <div class="invalid-feedback">
@@ -71,7 +76,7 @@
                       Veuillez saisir un code postal valide.
                     </div>
                   </div>
-                  <div class="col-md-3 mb-3">
+                  <div class="col-md-12 mb-6">
                     <label for="validationServer06">Ville</label>
                     <input type="text" class="form-control is-invalid" id="validationServer06" placeholder="Ville" required>
                     <div class="invalid-feedback">
@@ -103,11 +108,23 @@
             <th scope="col">Modifier</th>
           </thead>
           <tbody>
-              <td><img src="oneman.jpg" alt="perso" height="50px" width="50px"></td>
+            <tr>
+              <td><img src="oneman.jpg" alt="james" height="55px" width="55px"></td>
               <td>McGill</td>
               <td>James</td>
               <td>
                 <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#showcollabo">Afficher</button>
+              </td>
+              <td>
+                <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#editwindow">Modifier</button>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="chuck.jpg" alt="chuck" height="55px" width="55px"></td>
+              <td>McGill</td>
+              <td>Charles</td>
+              <td>
+                <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#showcollabo1">Afficher</button>
               </td>
               <td>
                 <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#editwindow">Modifier</button>
@@ -133,7 +150,7 @@
 
 
               <div class="card" style="width: 27rem;">
-                <img class="card-img-top" src="oneman.jpg" alt="Card image" height="350px" width="350px">
+                <img class="card-img-top" src="oneman.jpg" alt="Card image" height="325px" width="325px">
                 <div class="card-body">
                   <h4 class="card-title">James "Jimmy" McGill</h4>
                   <p class="card-text">Albuquerque</p>
@@ -148,6 +165,38 @@
     </div>
     </div>
   </div>
+
+
+
+  <div class="container">
+
+
+    <div class="modal fade" id="showcollabo1" tabindex="-1" role="dialog" aria-labelledby="showcollabo" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            </button>
+          </div>
+          <div class="modal-body">
+
+
+            <div class="card" style="width: 27rem;">
+              <img class="card-img-top" src="chuck.jpg" alt="Card image" height="550px" width="550px">
+              <div class="card-body">
+                <h4 class="card-title">Charles "Chuck" McGill</h4>
+                <p class="card-text">Albuquerque</p>
+                <p class="card-text">New Mexico</p>
+                <p class="card-text">Hamlin, Hamlin & McGill</p>
+              </div>
+            </div>
+
+
+          </div>
+      </div>
+  </div>
+  </div>
+</div>
 
 
 
