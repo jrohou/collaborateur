@@ -3,13 +3,18 @@ h1 {
   font-size: 22;
 }
 
-h3 {
+h5 {
   text-align: center;
-  font-size: 18;
 }
 
+img {
+  border-radius: 5px;
+}
 
-.glyph-icon svg {
-  width:16px;
-  height: 16px;
+.card-title {
+  text-align: center;
+}
+
+.card-text {
+  text-align: center;
 }

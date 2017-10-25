@@ -11,12 +11,15 @@
 
     <!-- Material Design for Bootstrap CSS -->
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.0.0-beta.3/dist/css/bootstrap-material-design.min.css" integrity="sha384-k5bjxeyx3S5yJJNRD1eKUMdgxuvfisWKku5dwHQq9Q/Lz6H8CyL89KF52ICpX4cL" crossorigin="anonymous">
+
+    <script src="app.js"></script>
+
   </head>
   <body>
     <br>
     <h1> Mon Collaborateur </h1>
     <br>
-    <h3>Collaborate different</h3>
+    <em><h5>Collaborate different</h5></em>
     <br>
     <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#ajoutwindow">Ajouter un nouveau Collaborateur</button>
     <br>
@@ -29,6 +32,7 @@
             <div class="modal-header">
               <h5 class="modal-title" id="ajoutwindow">Ajouter un nouveau Collaborateur</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
@@ -75,12 +79,12 @@
                     </div>
                   </div>
                 </div>
+              </form>
 
               </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dimiss="modal">Abandonner</button>
+                  <button type="button" class="close btn btn-secondary" data-dismiss="modal" aria-label="Close">Abandonner</button>
                 <button class="btn btn-primary" type="submit">Ajouter mon nouveau Collaborateur</button>
-              </form>
             </div>
         </div>
     </div>
@@ -89,21 +93,21 @@
 
 
     <div class="container">
-      <div class="col-md-6 mb-3">
+      <div class="col-md-12 mb-6">
         <table class="table table-bordered">
           <thead>
-            <th scope="col">#</th>
+            <th scope="col">Photo</th>
             <th scope="col">Nom</th>
             <th scope="col">Prénom</th>
             <th scope="col">Afficher</th>
             <th scope="col">Modifier</th>
           </thead>
           <tbody>
-              <th scope="row">1</th>
-              <td>Test</td>
-              <td>Test</td>
+              <td><img src="oneman.jpg" alt="perso" height="50px" width="50px"></td>
+              <td>McGill</td>
+              <td>James</td>
               <td>
-                <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#ajoutwindow">Afficher</button>
+                <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#showcollabo">Afficher</button>
               </td>
               <td>
                 <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#editwindow">Modifier</button>
@@ -113,6 +117,38 @@
         </table>
       </div>
     </div>
+
+
+    <div class="container">
+
+
+      <div class="modal fade" id="showcollabo" tabindex="-1" role="dialog" aria-labelledby="showcollabo" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              </button>
+            </div>
+            <div class="modal-body">
+
+
+              <div class="card" style="width: 27rem;">
+                <img class="card-img-top" src="oneman.jpg" alt="Card image" height="350px" width="350px">
+                <div class="card-body">
+                  <h4 class="card-title">James "Jimmy" McGill</h4>
+                  <p class="card-text">Albuquerque</p>
+                  <p class="card-text">New Mexico</p>
+                  <p class="card-text">Better Call Saul!</p>
+                </div>
+              </div>
+
+
+            </div>
+        </div>
+    </div>
+    </div>
+  </div>
+
 
 
     <div class="container">
@@ -131,10 +167,10 @@
 
               <form>
                 <div class="row">
-                  <div class="col-md-6 mb-3">
+                  <div class="col-md-12 mb-6">
                     <input type="text" class="form-control is-valid" id="validationServer01" placeholder="Prénom" required>
                   </div>
-                  <div class="col-md-6 mb-3">
+                  <div class="col-md-12 mb-6">
                     <label for="validationServer02">Nom</label>
                     <input type="text" class="form-control is-valid" id="validationServer02" placeholder="Nom" required>
                   </div>
@@ -142,12 +178,12 @@
                 <div class="row">
                   <div class="col-md-6 mb-3">
                     <label for="validationServer03">Date de naissance</label>
-                    <input type="text" class="form-control is-invalid" id="validationServer03" placeholder="Date de naissance" required>
+                    <input type="date" class="form-control is-invalid" id="validationServer03" placeholder="Date de naissance" required>
                     <div class="invalid-feedback">
                       Veuillez saisir une date de naissance valide.
                     </div>
                   </div>
-                  <div class="col-md-6 mb-3">
+                  <div class="col-md-12 mb-6">
                     <label for="validationServer04">Adresse</label>
                     <input type="text" class="form-control is-invalid" id="validationServer04" placeholder="Adresse" required>
                     <div class="invalid-feedback">
@@ -161,7 +197,7 @@
                       Veuillez saisir un code postal valide.
                     </div>
                   </div>
-                  <div class="col-md-3 mb-3">
+                  <div class="col-md-12 mb-6">
                     <label for="validationServer06">Ville</label>
                     <input type="text" class="form-control is-invalid" id="validationServer06" placeholder="Ville" required>
                     <div class="invalid-feedback">
