@@ -57,7 +57,7 @@
                 <div class="row">
                   <div class="col-md-6 mb-3">
                     <label for="validationServer03">Date de naissance</label>
-                    <input type="text" class="form-control is-invalid" id="validationServer03" placeholder="Date de naissance" required>
+                    <input type="date" class="form-control" id="validationServer03" placeholder="Date de naissance" required>
                     <div class="invalid-feedback">
                       Veuillez saisir une date de naissance valide.
                     </div>
@@ -215,7 +215,13 @@
 
 
               <form>
+                <div class="form-check form-check-inline" id="desactiver">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="checkbox" id="desactiver" value="desactiver"> Désactiver
+                </label>
+              </div>
                 <div class="row">
+                  <label for="validationServer01">Prénom</label>
                   <div class="col-md-12 mb-6">
                     <input type="text" class="form-control is-valid" id="validationServer01" placeholder="Prénom" required>
                   </div>

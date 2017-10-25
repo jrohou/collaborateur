@@ -18,3 +18,7 @@ img {
 .card-text {
   text-align: center;
 }
+
+#desactiver {
+  float:right;
+}
